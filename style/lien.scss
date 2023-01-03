@@ -1,0 +1,107 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+body {
+    background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
+}
+div.container {
+    z-index: 101;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+    padding: 13px 3px;
+}
+a {
+    border: solid 1px #fff;
+    padding: 10px;
+    color: #fff!important;
+}
+ol.liens-container {
+    position: absolute;
+    padding: 13px 3px;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+}
+ol.liens-container li {
+    margin: 10px;
+    color: white;
+}
+.canvas-container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+#timer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #aaa;
+    background-color: #ddd;
+    height: 30px;
+}
+.score {
+    top: 20px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #aaa;
+    background-color: #ddd;
+    height: 30px;
+    
+}
+.rez {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+}
+.rez.active{
+    display: block;
+}
+.tbl {
+    padding: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    position: absolute;
+    display: flex;
+    justify-content: space-evenly;
+    input {
+        margin:  25px 0 0 0;
+        padding: 2px 6px;
+        &:focus + label, &.valide + label{
+        transform: translate(0, -25px);
+        color: white;
+        }   
+        &#row + label{
+            left: 102px;
+        }
+    }
+    label {
+        top: 47.5px;
+        left: 25px;
+        position: absolute;
+        transition: all 0.5s;
+        text-transform: uppercase;
+        color: black;
+    }
+}

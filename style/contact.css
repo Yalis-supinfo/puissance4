@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+body {
+  background: radial-gradient(ellipse at top, #1B2735 0%, #090A0F 100%);
+  display: grid;
+  place-content: center;
+}
+
+a {
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  font-size: 30px;
+}
+
+form {
+  position: relative;
+  background-color: rgba(27, 39, 53, 0.6666666667);
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  color: black;
+  position: absolute;
+  transition: all 0.5s;
+  left: 30px;
+  margin: 15px 0;
+  transform: translate(0.5em, 0.5em);
+}
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  margin: 15px 0;
+}
+form input:focus + label, form input.valide + label,
+form textarea:focus + label,
+form textarea.valide + label {
+  transform: translate(0, -25px);
+  color: white;
+}
+form input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  margin: auto;
+}/*# sourceMappingURL=contact.css.map */

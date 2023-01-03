@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf11cf774f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+    <link rel="icon" href="img/il_570xN.2614550133_iojx.png">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/lien.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../index.html"><i class="fa-thin fa-square-arrow-left"></i></a>
+        <a href="" id="download" download="grille_de_jeu"><i class="fa-thin fa-file-arrow-down"></i></a>
+        <button onclick="restart()"><i class="fa-thin fa-arrow-rotate-right"></i></button>
+    </div>
+    <div class="tbl">
+        <input class="valide" type="number" name="col" id="col" onchange="label(this); if(4 <= this.value && this.value <= 15){nbCol = Number(this.value)}" min="4" max="15" value="7">
+        <label for="col">col</label>
+        <input class="valide" type="number" name="row" id="row" onchange="label(this); if(4 <= this.value && this.value <= 15){nbRow = Number(this.value)}" min="4" max="15" value="6">
+        <label for="row">row</label>
+    </div>
+    <button class="rez" onclick="restart()">cliquez pour lancer une nouvelle partie</button>
+    <div class="score">0:0</div>
+    <div id="timer">0:00</div>
+    <div class="canvas-container"></div>
+</body>  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.18.0/matter.min.js"></script>
+<script id="rendered-js" src="app.js"></script>
+
+</html>
+

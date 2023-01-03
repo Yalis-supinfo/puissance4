@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/cf11cf774f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+    <link rel="icon" href="img/il_570xN.2614550133_iojx.png">
+    <title>Contactez nous</title>
+    <link rel="stylesheet" href="../style/contact.css">
+</head>
+<body>
+    <a href="../index.html"><i class="fa-thin fa-square-arrow-left"></i></a>
+    <form>
+        <div class="label-container">
+            <input onchange="label(this)" type="text" id="first-name" name="first-name">
+            <label for="first-name">Nom</label>
+        </div>
+        <div class="label-container">
+            <input onchange="label(this)" type="text" id="last-name" name="last-name">
+            <label for="last-name">Prénom</label>
+        </div>
+        <div class="label-container">
+            <input onchange="label(this)" type="email" id="email" name="email">
+            <label for="email">Email</label>
+        </div>
+        <div class="label-container">
+            <textarea onchange="label(this)" name="message" id="message" cols="25" rows="4"></textarea>
+            <label for="message">Message</label>
+        </div>
+        <input type="submit" value="Envoyer">
+      </form> 
+      
+</body>
+<script>
+    
+    function label(input){
+        if (input.value.length > 0){
+            input.classList.add('valide')
+        }else{
+            input.classList.remove('valide')
+        }
+    }
+</script>
+</html>

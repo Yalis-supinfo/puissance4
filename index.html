@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style/index_style.css" />
+    <script src="https://kit.fontawesome.com/cf11cf774f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/all.css">
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.2.1/css/sharp-solid.css">
+    <link rel="icon" href="img/il_570xN.2614550133_iojx.png">
+    <title>Etoiles</title>
+    <script>
+        window.addEventListener("load", (event) => {
+            document.getElementById("chargement").style.display = "none";
+        });
+    </script>
+</head>
+<body>
+<div id="chargement"><i class="fa-thin fa-loader fa-spin"></i></div>
+<main>
+    <nav>
+        <a href="#footer" id="parametre" title="settings">
+            <i class="fa-thin fa-gear"></i>
+        </a>
+        <a href="#" id="rules-icon" title="rules">
+            <i class="fa-thin fa-book"></i>
+        </a>
+        <a href="templates/contactus.html" id="contact-icon" title="contact us">
+            <i class="fa-thin fa-envelope"></i>
+        </a>
+    </nav>
+    <div class="rules-container">
+        <div id="exit-container"></div>
+        <div id="rules">
+            <div id="exit">
+                <i class="fa-thin fa-xmark-large"></i>
+            </div>
+            <h2>
+                Pour jouer au puissance 4,
+                <br>
+                il vous faut :
+            </h2>
+            <p>
+                Le plateau du jeu et ses 42 emplacements pour jetons répartis en 6 lignes et 7 colonnes
+                42 jetons de 2 couleurs différentes.
+                <br>
+                Être 2 joueurs.
+            </p>
+            <h2>
+                Commencer une partie :
+            </h2>
+            <p>
+                Pour commencer une partie, on désigne le premier joueur. Celui-ci met un de ses jetons de couleur dans l’une des colonnes de son choix. Le jeton tombe alors en bas de la colonne.
+                <br>
+                Le deuxième joueur insère à son tour son jeton, de l’autre couleur dans la colonne de son choix. Et ainsi de suite jusqu’à obtenir une rangée de 4 jetons de même couleur.
+                <br>
+            </p>
+            <h2>
+                Comment gagner une partie :
+            </h2>
+            <p>
+                Pour gagner une partie, il suffit d’être le premier à aligner 4 jetons de sa couleur horizontalement, verticalement et diagonalement.
+                <br>
+                Si lors d’une partie, tous les jetons sont joués sans qu’il y est d’alignement de jetons, la partie est déclaré nulle.
+            </p>
+        </div>
+    </div>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <div id="stars4"></div>
+    <form action="templates/lien.html" method="get">
+    <div id="title">
+        <h1>PUISSANCE 4</h1>
+        <button type="submit">JOUER</a>
+    </div>
+</main>
+<footer>
+    <a href="#" id="footer">
+        <i class="fa-thin fa-chevrons-up"></i>
+    </a>
+    <a href="https://github.com/Yalis-supinfo/puissnce4" title="github" id="github">
+        <img src="img/github-brand-logo-474012.png" alt="" srcset="">
+    </a>
+    <div class="form">
+        <p>couleur des joueurs</p>
+        <div class="colors">
+            <input type="color" name="colorjoueur1" id="colorjoueur1" value="#ffff00">
+            <input type="color" name="colorjoueur2" id="colorjoueur2" value="#ff0000">
+            <div class="colorslabel">
+                <label for="colorjoueur1">joueur 1</label>
+                <label for="colorjoueur2">joueur 2</label>
+            </div>
+        </div>
+    
+        <div class="tbl">
+            <input class="valide" type="number" name="col" id="col" onchange="label(this)" min="4" max="15" value="7">
+            <label for="col">col</label>
+            <input class="valide" type="number" name="row" id="row" onchange="label(this)" min="4" max="15" value="6">
+            <label for="row">row</label>
+        </div>
+    </div>
+    </form>
+</footer>
+</body>
+</html>
+<script>
+
+    document.getElementById('rules-icon').addEventListener('click', () => {
+        document.querySelector('.rules-container').classList.add('open')
+    })
+
+    document.getElementById('exit').addEventListener('click', () => {
+        document.querySelector('.rules-container').classList.remove('open')
+    })
+
+
+    document.querySelector('#exit-container').addEventListener('click', () => {
+        document.querySelector('.rules-container').classList.remove('open')
+    })
+
+    function label(input){
+        if (input.value.length > 0){
+            input.classList.add('valide')
+        }else{
+            input.classList.remove('valide')
+        }
+    }
+</script>
